@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>프리코네 그랜드마스터즈 DB</title>
+    <link rel="stylesheet" href="SSA.css">
+</head>
+<body>
+    <header>
+        <h1>
+            프리코네 그랜드마스터즈 DB
+        </h1>
+        <div>
+            <a href="https://priconne-grandmasters.jp/">
+                <img  src="app_icon.png" alt="app_icon" />
+            </a>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <a href="#home-id">소개</a>
+            <a href="#cynergy-id">시너지</a>
+            <a href="#unit-id">장비</a>
+        </div>
+    </nav>
+    <section>
+        
+        <h2 id="home-id">기간한정 캠페인 현재 진행중!</h2>
+        <h3>2023 April Fool's Day Campaign (4/1 ~ 4/10 16:59)</h3>
+        
+        <h3>프 토 체 스 10일간 기간 한정 서비스!</h3>
+
+
+        <h2> 수치 정보 </h2>
+        <li>리더 HP : 50</li>
+        <li>리더 패배 데미지 : (남은 유닛 개체수)*2 + (라운드 기본 데미지)</li>
+            <ol> ㅡ 라운드 기본 데미지   <BR>1~5R : 0 <BR>6~10R : 2 <BR>11~15R : 6 <BR>16~20R : 8</ol>
+        <li>리더 Lv에 따른 레어리티</li>
+        <table>
+            <tr>
+                <th scopr="col" style="uma">Lv.</th>
+                <th scope="col">1성</th>
+                <th scope="col">2성</th>
+                <th scope="col">3성</th>
+                <th scope="col">4성</th>
+                <th scope="col">5성</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0%</td>
+        </table>
+
+
+        <div>
+
+            
+        </div>
+        <div id="precolor">
+        <h1 id="cynergy-id"> 시너지 </h1></div>
+            <h2>◈ 직업 시너지</h2>
+            <div>
+            <table>
+                <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">요구 유닛수</th>
+                    <th scope="col">효과 범위</th>
+                    <th scope="col">효과</th>
+                </tr>
+                <tr>
+                    <td style="color:orangered">탱크</td>
+                    <td>3/5/7</td>
+                    <td>직업군</td>
+                    <td>유닛의 방어력을 <span id="vc">80/150/300</span> 증가</td>
+                </tr>
+                <tr>
+                    <td style="color:dodgerblue">소드마스터</td>
+                    <td>3/6</td>
+                    <td>직업군</td>
+                    <td>일반 공격 시 <span id="vc">40%/75%</span> 확률로 준 데미지를 추가로 부여</td>
+                </tr>
+                <tr>
+                    <td style="color:turquoise">소서러</td>
+                    <td>3/5/7</td>
+                    <td>직업군</td>
+                    <td>유닛의 스킬 데미지를 <span id="vc">40%/60%/100%</span> 증가</td>
+                </tr>
+                <tr>
+                    <td style="color:#f374b4">실드마스터</td>
+                    <td>2/4/6</td>
+                    <td>직업군</td>
+                    <td>4초마다 <span id="vc">20%/40%/70%</span> 확률로 받는 데미지를 <span id="vc">50%/60%/70%</span> 감소시키는 실드를 생성</td>
+                </tr>
+                <tr>
+                    <td style="color:mediumpurple">어쌔신</td>
+                    <td>2/4/6</td>
+                    <td>직업군</td>
+                    <td>일반 공격 시 <span id="vc">15%/30%/60%</span> 확률로 250% 데미지의 치명타를 부여</td>
+                </tr>
+                <tr>
+                    <td id="uma">스트라이커</td>
+                    <td>3/5</td>
+                    <td>직업군</td>
+                    <td>일반 공격 시 잔여 HP가 <span id="vc">20%/30%</span> 이하인 유닛을 즉사</td>
+                </tr>
+                <tr>
+                    <td style="color:gold">힐러</td>
+                    <td>2/3/4</td>
+                    <td>아군 전체</td>
+                    <td>일반 공격 시 준 데미지의 <span id="vc">20%/40%/60%</span> 만큼 HP를 회복</td>
+                </tr>
+                <tr>
+                    <td style="color:red">스킬 가드</td>
+                    <td>2/3/4</td>
+                    <td>아군 전체</td>
+                    <td>유닛의 스킬 방어력을 <span id="vc">50/100/200</span> 증가</td>
+                </tr>
+                <tr>
+                    <td style="color:limegreen">부스트</td>
+                    <td>2/3</td>
+                    <td>직업군</td>
+                    <td>배틀 페이즈 시작 시 <span id="vc">40/모든</span> TP를 회복</td>
+                </tr>
+                <tr>
+                    <td style="color:crimson">미러</td>
+                    <td>1</td>
+                    <td>직업군</td>
+                    <td>가장 가까운 아군의 시너지를 부여</td>
+                </tr>
+                <tr>
+                    <td style="color:green">헌터</td>
+                    <td>2/4/6</td>
+                    <td>직업군</td>
+                    <td>3번째 일반 공격마다 무작위 타겟 3체에게 <span id="vc">40/60/100</span> 의 특수 데미지</td>
+                </tr>
+                <tr>
+                    <td style="color:lightseagreen">차지</td>
+                    <td>1</td>
+                    <td>셰피</td>
+                    <td>[빙룡의 인]의 수에 비례하여 셰피의 최대 HP, 공격력, 방어력이 <span id="vc">?</span> 상승</td>
+                </tr>
+                
+            </table>
+            <h2>◈ 타입 시너지</h2>
+            <div>
+            <table>
+                <tr>
+                    <th scope="col">아이콘</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">요구 유닛수</th>
+                    <th scope="col">효과 범위</th>
+                    <th scope="col">효과</th>
+                </tr>
+                <tr>
+                    <td><img src="https://static.wikia.nocookie.net/princess-connect/images/d/d7/Ghpup.png"/></td>
+                    <td style="color:coral">HP 업</td>
+                    <td>2/4/6</td>
+                    <td>시너지 유닛</td>
+                    <td>유닛의 최대 HP를 <span id="vc">200/500/1000</span> 증가</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_02.png"/></td>
+                    <td style="color:limegreen">TP 업</td>
+                    <td>3/6</td>
+                    <td>아군 전체</td>
+                    <td>4초마다 <span id="vc">10/20</span> TP를 회복</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_03.png"/></td>
+                    <td style="color:dodgerblue">회피</td>
+                    <td>3/4/5</td>
+                    <td>아군 전체</td>
+                    <td>일반 공격을 받을 때 <span id="vc">25%/30%/40%</span> 확률로 받는 데미지를 0으로 변환</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_04.png"/></td>
+                    <td style="color:orangered">공격력 업</td>
+                    <td>2/4/6</td>
+                    <td>아군 전체</td>
+                    <td>유닛의 공격력을 <span id="vc">10%/20%/40%</span> 증가</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_05.png"/></td>
+                    <td style="color:royalblue">스턴</td>
+                    <td>2/4</td>
+                    <td>시너지 유닛</td>
+                    <td>일반 공격 시 <span id="vc">20%/40%</span> 확률로 2초간 기절 상태이상 부여</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_06.png"/></td>
+                    <td style="color:goldenrod">일시무적</td>
+                    <td>2/3</td>
+                    <td>시너지 유닛</td>
+                    <td>유닛의 HP가 50% 이하로 떨어졌을 때, <span id="vc">4/6</span> 초 간 받는 데미지를 0으로 변환</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_07.png"/></td>
+                    <td style="color:turquoise">링크</td>
+                    <td>3/6</td>
+                    <td>시너지 유닛</td>
+                    <td>아군 유닛이 쓰러질 때마다, <span id="vc">20%/30%</span> 의 공격력을 증가 및 최대 HP의 <span id="vc">20%/35%</span> 만큼 회복 </td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_08.png"/></td>
+                    <td style="color:lightsteelblue">방어력 다운</td>
+                    <td>2/4/6</td>
+                    <td>적 전체</td>
+                    <td>유닛의 방어력을 <span id="vc">20%/40%/70%</span> 감소 </td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_09.png"/></td>
+                    <td style="color:mediumpurple">추가 데미지</td>
+                    <td>3/6</td>
+                    <td>시너지 유닛</td>
+                    <td>일반 공격 시 <span id="vc">35%/70%</span> 의 추가 특수 데미지를 추가 </td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_10.png"/></td>
+                    <td style="color:crimson">미러</td>
+                    <td>1</td>
+                    <td>시너지 유닛</td>
+                    <td>가장 가까운 아군의 시너지를 부여</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_11.png"/></td>
+                    <td style="color:gold">공격속도 업</td>
+                    <td>2/4/6</td>
+                    <td>아군 전체</td>
+                    <td>유닛의 공격속도를 <span id="vc">120%/130%/150%</span> 로 증가</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/synergy/typesynergy_icon_12.png"/></td>
+                    <td id="precolor">단짝부</td>
+                    <td>3</td>
+                    <td>시너지 유닛</td>
+                    <td>전투를 할 때 마다 무작위 단짝부 유닛을 획득</td>
+                </tr>
+                
+            </table>
+       
+        </div>
+        <div id="precolor">
+        <h1 id="unit-id"> 장비 </h1></div>
+        <div>
+            <div>
+            <table>
+                <tr>
+                    <th scope="col">아이콘</th>
+                    <th scope="col">이름</th>
+                    <th scope="col">기본 효과</th>
+                    <th scope="col">추가 효과</th>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_01.png"></td>
+                    <td>취풍신의 태도</td>
+                    <td>공격력 + 30</td>
+                    <td>일반 공격으로 준 데미지의 20%만큼 사용자의 HP를 회복</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_02.png"></td>
+                    <td>극암조 블러디 하울</td>
+                    <td>공격력 + 30</td>
+                    <td>일반 공격이 대상에게 적중하면 6초 간 초당 최대 HP의 3%만큼 특수 데미지 및 HP 회복 효과를 60% 감소시키는 효과를 부여 </td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_03.png"></td>
+                    <td>케라우노스 완드</td>
+                    <td>스킬 데미지 + 40%</td>
+                    <td>ㅡ</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_04.png"></td>
+                    <td>네크로 딤 엑스</td>
+                    <td>스킬 데미지 + 20%</td>
+                    <td>스킬 대상과 주위 2 타일 범위 내의 최대 2체의 무작위 적에게 200 특수 데미지</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_05.png"></td>
+                    <td>홍천궁</td>
+                    <td>공격속도 + 30%</td>
+                    <td>일반 공격의 사거리 2배 및 공격에 필중 부여</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_06.png"></td>
+                    <td>게일 스팅어</td>
+                    <td>공격속도 + 15%</td>
+                    <td>3번째 일반 공격마다 무작위 3명의 적에게 70의 특수 데미지</td>
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_07.png"></td>
+                    <td>과오의 대검</td>
+                    <td>크리티컬 + 30%</td>
+                    <td>일반 공격의 크리티컬 데미지가 250%로 증가</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_08.png"></td>
+                    <td>라바 엣지</td>
+                    <td>크리티컬 + 15%</td>
+                    <td>일반 공격의 크리티컬 데미지가 250%로 증가 / 매 초 크리티컬이 3%가 증가하지만, 크리티컬 적중시 상승분은 리셋</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_09.png"></td>
+                    <td>블러드 루비 구두</td>
+                    <td>방어력 + 60</td>
+                    <td>크리티컬 공격으로 받는 데미지를 0으로 감소</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_10.png"></td>
+                    <td>치백은의 방패</td>
+                    <td>방어력 + 30</td>
+                    <td>일반 공격 피격시 반사하여 공격한 적의 공격력 10% 만큼 특수 데미지</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_11.png"></td>
+                    <td>방패의 윌 브레스</td>
+                    <td>스킬 방어력 + 30</td>
+                    <td>스킬로 인해 받는 데미지를 45% 감소</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_12.png"></td>
+                    <td>투신의 팔찌</td>
+                    <td>스킬 방어력 + 30</td>
+                    <td>스킬 공격 피격시 공격한 적에게 8초간 행동불능을 부여</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_13.png"></td>
+                    <td>정령왕의 수호석</td>
+                    <td>최대 HP + 300</td>
+                    <td>HP가 0이 되는 데미지를 받았을 때 데미지를 무효로 한 후 최대 HP의 40%까지 HP를 회복</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_14.png"></td>
+                    <td>백기의 성스러운 관</td>
+                    <td>최대 HP + 300</td>
+                    <td>일반 공격시 25% 확률로 적에게 3초간 일반 공격 불능 부여</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_15.png"></td>
+                    <td>이지스 코트</td>
+                    <td>방어력 및 기술 방어력 + 15 </td>
+                    <td>최대 HP 40% 이하일 때 최초로 데미지를 받으면 2초 후 사용자를 포함한 주위 2타일 범위 내의 아군 전원 HP를 200 회복</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_16.png"></td>
+                    <td>푸른 빛의 갑주</td>
+                    <td>방어력 및 기술 방어력 + 15 </td>
+                    <td>주위 1타일 범위 내의 적 유닛의 공격속도를 40% 감소</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_17.png"></td>
+                    <td>해룡신의 머리장식</td>
+                    <td>공격시 TP 회복 + 50% </td>
+                    <td>스킬 사용시 TP를 10 회복</td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_18.png"></td>
+                    <td>인어공주의 눈물</td>
+                    <td>공격시 TP 회복 + 50% </td>
+                    <td>스킬로 데미지를 입힌 적에게 6초 간 초당 최대 HP의 3%만큼 특수 데미지 및 HP 회복 효과를 60% 감소시키는 효과를 부여 </td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_19.png"></td>
+                    <td>유닛 배지</td>
+                    <td>ㅡ</td>
+                    <td>유닛에 사용하면 동일한 랭크 1 유닛을 획득 </td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_20.png"></td>
+                    <td>직업 젬</td>
+                    <td>ㅡ</td>
+                    <td>[직업] 시너지를 부여하는 장비 획득 </td> 
+                </tr>
+                <tr>
+                    <td><img src="https://priconne-grandmasters.jp/assets/images/pc/game_system/equipment/equipment_icon_21.png"></td>
+                    <td>타입 젬</td>
+                    <td>ㅡ</td>
+                    <td>[타입] 시너지를 부여하는 장비 획득 </td> 
+                </tr>
+            </table>
+
+            장비 이름은 공식 번역을 따릅니다. <br>
+            장비 성능에 대해서는 공식 홈페이지의 정보를 따릅니다.<br>
+            <br><br>
+            Ver.230408 업데이트 진행중
+
+            <br>
+            <br>
+            <br>
+            
+
+
+            
+
+        
+        </div>
+        
+    </section>
+    <asdie>
+        <h2>NOTICE</h2><br>
+        <div id="uma"><h3>옆 동네</h3></div>
+        사지타리우스배 챔피언스 미팅 개최 예정!<br>
+        4월 중반 접수 신청
+    </asdie>
+    <footer>
+        CSS Practice Page <br>
+        content is available under CC-BY-SA unless otherwise noted.
+    </footer>
+</body>
+</html>
