@@ -1,0 +1,99 @@
+﻿@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+html,
+body {
+    height: 100%;
+    margin: 48px;
+    background-color: #292929;
+    font-family: Dovemayo_gothic, Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+section {
+    width: 70%;
+    height: auto;
+    float: left;
+    margin-left: 32px;
+    min-height: 100%;
+    padding-bottom: 30px;
+
+}
+
+header {
+    background-color: rgb(129, 114, 224);
+    color: white;
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 12px;
+    padding: 4px;
+    text-align: center;
+}
+
+header div{
+    float: left;
+    margin-top: 10px;
+}
+
+nav {
+    position: static;
+    width: 360px;
+    display: table-cell;
+    margin: 0 auto;
+}
+  
+nav a {
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #f374b4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16pt;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+ }
+
+nav a:hover {
+    color: aliceblue;
+}
+
+table{
+    width: 93%;
+    background-color: rgb(70, 70, 70);
+    text-align: center;
+}
+table img{
+    width: 36px;
+}
+  
+aside{
+    width: 30%;
+    background-color: azure;
+    float: right;
+}
+
+footer {
+    position : relative;
+    height: 30px;
+    transform : translateY(-100%);
+    background-color: rgb(152, 201, 185);
+    clear: both;
+    padding: 5px;
+    color: #f374b4;
+}
+
+#uma {
+    color: coral;
+}
+
+#precolor {
+    color:plum;
+}
+
+#vc {
+    color:lightskyblue;
+}
